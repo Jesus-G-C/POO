@@ -24,7 +24,7 @@ public class CLI {
         }
     }
 
-    public static void launch(){
+    public static void runApp(){
         showMenu();
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
