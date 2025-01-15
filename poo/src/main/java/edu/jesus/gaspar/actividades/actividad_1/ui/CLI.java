@@ -7,7 +7,7 @@ public class CLI {
     public static void showMenu(){
         System.out.println("1. Crea nuevo estudiante");
         System.out.println("2. Listar estudiantes");
-        System.out.println("2. Salir");
+        System.out.println("3. Salir");
     }
     
     public void showmessage(String message){
