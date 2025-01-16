@@ -2,23 +2,28 @@ package edu.jesus.gaspar.actividades.actividad_1.ui;
 
 import java.util.Scanner;
 
+import edu.jesus.gaspar.actividades.actividad_1.process.StockManager;
+
 public class CLI {
     
     public static void showMenu(){
-        System.out.println("1. Crea nuevo estudiante");
-        System.out.println("2. Listar estudiantes");
-        System.out.println("3. Salir");
+        System.out.println("""
+            Menu
+            1. Crear estudiante
+            2. Listar
+            3. Salir
+            """);
     }
-    
-    public void showmessage(String message){
+
+    public void showMessage(String message){
         System.out.println(message);
     }
 
-    public void showerror(String message){
+    public void showError(String message){
         System.out.println("Error"+message);
     }
 
-    public void showstudents(String[] students){
+    public void showStudents(String[] students){
         for (String student : students){
             System.out.println(student);
         }
@@ -27,18 +32,26 @@ public class CLI {
     public static void runApp(){
         showMenu();
         Scanner scanner = new Scanner(System.in);
+        StockManager stockManager = new StockManager();
         int option = scanner.nextInt();
         while (option != 3){
             switch (option){
                 case 1:
-                    System.out.println("Crear un nuevo estudiante");
+                    System.out.println("Introduce el numero de puertas");
+                    int numPuertas = scanner.nextInt();scanner.nextLine();
+                    System.out.println("Introduce el color");
+                    String color = scanner.nextLine();
+                    System.out.println("Introduce el modelo");  
+                    String modelo = scanner.nextLine();
+                    System.out.println("Introduce la marca");
+                    String marca = scanner.nextLine();
+
                     break;
                 case 2:
-                    System.out.println("Listar estudiantes");
+                    stockManager.printStock();
                     break;
-                case 3:
+                default:
                     System.out.println("Opcion invalida");
-                    break;
             }
             showMenu();
             option = scanner.nextInt();
