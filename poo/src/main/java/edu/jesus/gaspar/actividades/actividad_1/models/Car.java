@@ -6,20 +6,12 @@ public class Car {
     private int numeroPuertas;
     private String color;
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                "modelo='" + modelo + '\'' +
-                ", marca='" + marca + '\'' +
-                ", numeroPuertas=" + numeroPuertas +
-                ", color='" + color + '\'' +
-                '}';
-    }
+
 
     public Car(String modelo, String marca, int numeroPuertas, String color) {
         this.modelo = modelo;
         this.marca = marca;
-        this.numeroPuertas = numeroPuertas;
+        setNumeroPuertas(numeroPuertas);
         this.color = color;
     }
 
@@ -29,7 +21,7 @@ public class Car {
 
     public void setNumeroPuertas(int numeroPuertas) {
         if(numeroPuertas<2 || numeroPuertas>5){
-            throw new IllegalArgumentException("numero de puertas valido esta entre 2 y 5");
+            throw new IllegalArgumentException("El numero de puertas valido esta entre 2 y 5");
         }
 
         this.numeroPuertas = numeroPuertas;
@@ -58,5 +50,15 @@ public class Car {
     public void setColor(String color) {
         this.color = color;
     }
-    
+
+    @Override
+    public String toString() {
+        return "\n Car{" +
+                "modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", numeroPuertas='" + numeroPuertas + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
 }
