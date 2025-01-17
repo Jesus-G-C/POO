@@ -6,8 +6,6 @@ public class Car {
     private int numeroPuertas;
     private String color;
 
-
-
     public Car(String modelo, String marca, int numeroPuertas, String color) {
         this.modelo = modelo;
         this.marca = marca;
