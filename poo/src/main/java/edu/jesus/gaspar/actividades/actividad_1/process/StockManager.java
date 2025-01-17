@@ -17,7 +17,7 @@ public class StockManager {
     }       
 
     public void printStock(){
-        System.out.println("El catologo actual es: ");
+        System.out.print("El catologo actual es: ");
         System.out.println(stock);
     }
 }
