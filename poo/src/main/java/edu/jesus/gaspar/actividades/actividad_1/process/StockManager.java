@@ -10,6 +10,9 @@ public class StockManager {
 
     ArrayList<Car> stock;
 
+    /**
+     * Inicializa el catologo
+    */
     public StockManager(){
         this.stock = new ArrayList<>();
     }
@@ -26,6 +29,11 @@ public class StockManager {
         Car car = new Car(modelo,marca,numeroPuertas,color);
         stock.add(car);
     }       
+
+    /**
+     * 
+     * @return Devuelve una lista con todo el catalago guardado
+    */
 
     public List<Car> getStock(){
         return this.stock;

@@ -6,6 +6,14 @@ public class Car {
     private int numeroPuertas;
     private String color;
 
+    /**
+     * Se genera un nuevo objeto con la info de un carro
+     * @param modelo año del carro
+     * @param marca empresa del carro
+     * @param numeroPuertas
+     * @param color variedad de colores
+    */
+
     public Car(String modelo, String marca, int numeroPuertas, String color) {
         this.modelo = modelo;
         this.marca = marca;
@@ -16,6 +24,12 @@ public class Car {
     public int getNumeroPuertas() {
         return numeroPuertas;
     }
+
+    /**
+     * 
+     * @param numeroPuertas Validacion de numero de puertas, solo acepta de 2 a 5
+     * @throws IllegalArgumentException Termina el programa por error de puertas invalido
+    */
 
     public void setNumeroPuertas(int numeroPuertas) {
         if(numeroPuertas<2 || numeroPuertas>5){
@@ -49,6 +63,9 @@ public class Car {
         this.color = color;
     }
 
+    /**
+     * @return Regresa la forma en la que se vera ordenada los datos del catalogo en cadena
+    */
     @Override
     public String toString() {
         return "\n Car{" +
