@@ -15,12 +15,16 @@ public class Car {
     */
 
     public Car(String modelo, String marca, int numeroPuertas, String color) {
-        this.modelo = modelo;
-        this.marca = marca;
+        setModelo(modelo);
+        setMarca(marca);
         setNumeroPuertas(numeroPuertas);
-        this.color = color;
+        setColor(color);
     }
 
+    /**
+     * 
+     * @return Obtiene el numero de puertas
+     */
     public int getNumeroPuertas() {
         return numeroPuertas;
     }
@@ -39,26 +43,50 @@ public class Car {
         this.numeroPuertas = numeroPuertas;
     }
 
+    /**
+     * 
+     * @return Regresa el año del carro
+     */
     public String getModelo() {
         return modelo;
     }
 
+    /**
+     * Setea el año del carro
+     * @param modelo
+     */
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
+    /**
+     * 
+     * @return Regresa la marca del carro
+     */
     public String getMarca() {
         return marca;
     }
 
+    /**
+     * Setea la marca del carro
+     * @param marca
+     */
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
+    /**
+     * Regresa el color del carro
+     * @return
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * Setea el color del carro
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }

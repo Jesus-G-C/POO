@@ -5,9 +5,9 @@ import edu.jesus.gaspar.actividades.actividad_1.ui.CLI;
 public class Starter {
 
 /**
- * Inicia el programa
- * @param args Es el arreglo de cadenas
-*/
+ * Iniciador de programa
+ * @param args
+ */
 public static void main(String[] args) {
     CLI.runApp();
 } 
