@@ -1,16 +1,17 @@
 package edu.jesus.gaspar.actividades.actividad_2.process;
 
-import edu.jesus.gaspar.actividades.actividad_2.models.Data;
+import static edu.jesus.gaspar.actividades.actividad_2.models.Data.namesDefault;
 
 public class NameValidator {
 
-    public static boolean nameValidator(String namesDefault){
+    public static boolean validateName(String name){
     boolean valid = false;
     int index = 0;
-    while (!valid && index<Data.namesDefault.length) {
-        if(namesDefault[index].equals(namesDefault)){
-            
+    while (!valid && index<namesDefault.length) {
+        if(namesDefault[index].equals(name)){
+            valid = true;
         }
+        index++;
     }
     return valid;
     }

@@ -18,8 +18,10 @@ public class CLI {
                 case 1:
                     System.out.println("Introduce el nombre a verificar");  
                     String nameEntry = scanner.nextLine();
-                    if(NameValidator.nameValidator(nameEntry)){
-                        System.err.println("Nombre no existente");
+                    if(NameValidator.validateName(nameEntry)){
+                        System.out.println("Nombre existente en la DataBase");
+                    } else {
+                        System.out.println("El nombre no existe en la DataBase");
                     }
                     break;
                 case 2:
