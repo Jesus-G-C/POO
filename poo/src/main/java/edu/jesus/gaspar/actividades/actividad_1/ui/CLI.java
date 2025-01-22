@@ -6,6 +6,9 @@ import edu.jesus.gaspar.actividades.actividad_1.process.StockManager;
 
 public class CLI {
 
+    /**
+     * Este metodo es la intefaz con el usuario, al pedirle datos y almacenarlos para la creacion del carro
+    */
     public static void runApp(){
         Scanner scanner = new Scanner(System.in);
         StockManager stockManager = new StockManager();
@@ -19,14 +22,15 @@ public class CLI {
                     int numeroPuertas = scanner.nextInt();scanner.nextLine();
                     System.out.println("Introduce el color");
                     String color = scanner.nextLine();
-                    System.out.println("Introduce el modelo");  
+                    System.out.println("Introduce el modelo(Year)");  
                     String modelo = scanner.nextLine();
                     System.out.println("Introduce la marca");
                     String marca = scanner.nextLine();
                     stockManager.addCar(modelo, marca, numeroPuertas, color);
                     break;
                 case 2:
-                    stockManager.printStock();
+                System.out.print("El catologo actual es: ");
+                System.out.println(stockManager.getStock() + "\n");
                     break;
                 default:
                     System.out.println("Opcion invalida");
@@ -36,6 +40,9 @@ public class CLI {
         }
     }
 
+    /**
+     * Este metodo crea el menu interactivo con el usuario
+    */
     public static void showMenu(){
         System.out.println("""
             Menu
