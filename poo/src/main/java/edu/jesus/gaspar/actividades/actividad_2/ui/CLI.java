@@ -7,6 +7,9 @@ import edu.jesus.gaspar.actividades.actividad_2.process.NameValidator;
 
 public class CLI {
 
+    /**
+     * Este método hace el UI del menu interactivo con el usuario, mandando llamar los metodos de nombres y numeros
+     */
     public static void runApp(){
         Scanner scanner = new Scanner(System.in);
         Generator generator = new Generator();
@@ -16,14 +19,15 @@ public class CLI {
         while (option != 3){
             switch (option){
                 case 1:
-                    System.out.println("Introduce el nombre a verificar");  
+                    System.out.println("Introduce el nombre a verificar (La mayuscula importa)");  
                     String nameEntry = scanner.nextLine();
-                    if(NameValidator.validateName(nameEntry)){
+                        if(NameValidator.validateName(nameEntry)){
                         System.out.println("Nombre existente en la DataBase");
-                    } else {
+                      } else {
                         System.out.println("El nombre no existe en la DataBase");
-                    }
+                        }
                     break;
+
                 case 2:
                 System.out.print("Numeros pares al 100: \n");
                 System.out.println(generator.getEven());
@@ -33,13 +37,16 @@ public class CLI {
                     System.out.println("Opcion invalida");
             }
             showMenu();
-            option = scanner.nextInt();
+            option = scanner.nextInt();scanner.nextLine();
         }
     }
 
+    /**
+     * Imprime el texto del menu que el usuario va ver de primera mano
+     */
     public static void showMenu(){
         System.out.println("""
-            Bienvenido, ¿que programa deseas ver?
+            \n Bienvenido, ¿que programa deseas ver?
             1. Comparar nombre
             2. Numeros
             3. Salir
