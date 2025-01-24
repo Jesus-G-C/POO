@@ -6,6 +6,10 @@ import java.util.Set;
 
 public class FindFirstDuplicated {
 
+    /**
+     * Metodo para pedir palabra al usuario e imprime el menu visible
+     * @param args
+     */
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Palabra:");
@@ -23,6 +27,11 @@ public class FindFirstDuplicated {
         }
     }
 
+    /**
+     * Metodo para encontrar la primer letra duplicada
+     * @param word variable para la palabra
+     * @return 
+     */
     public static int fisrtDuplicated(String word){
         Set<Character> letter = new HashSet<>();
 
