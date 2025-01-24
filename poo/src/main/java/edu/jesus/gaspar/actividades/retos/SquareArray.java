@@ -29,6 +29,11 @@ public class SquareArray {
 
     }
 
+    /**
+     * Metodo para hacer el arreglo al cuadrado
+     * @param numbers arreglo de numeros
+     * @return 
+     */
     public static int squareArray(int[] numbers){
         int[] squareNumbers = numbers;
         for (int i = 0; i < squareNumbers.length; i++){
@@ -36,7 +41,7 @@ public class SquareArray {
         }
         Arrays.sort(squareNumbers);
         System.out.println(" El arreglo al cuadrado es: " + Arrays.toString(squareNumbers));
-                return 0;
+        return 0;
     }
 
     @Override
