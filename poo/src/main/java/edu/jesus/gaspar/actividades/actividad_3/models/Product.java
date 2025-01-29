@@ -8,7 +8,7 @@ public class Product {
     private double afterTax;
     
         /**
-         * 
+         * Este metodo es para los parametros de setters y getters del producto
          * @param price 
          * @param name 
          * @param beforeTax
@@ -69,12 +69,7 @@ public class Product {
         */
         @Override
         public String toString() {
-            return  "Producto\n" +
-                    "modelo='" + name + '\'' +
-                    ", precio='" + price + '\'' +
-                    ", Antes de impuestos ='" + beforeTax + '\'' +
-                    ", Después de impuestos ='" + afterTax + '\'' 
-                    ;
+            return  "To string";
         }
     
     }
